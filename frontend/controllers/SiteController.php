@@ -152,32 +152,21 @@ class SiteController extends Controller
     
     public function actionSupplier()
     {
-        $model = new Supplier();
+        $model = new SupplierForm();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        //if ($model->load(Yii::$app->request->post()) && $model->save()) {
             
-            
-            
-            return $this->render('supplier', ['model' => $model]);
+        if ($model->load(Yii::$app->request->post())) {
+           
+            echo "<h2>Comments are </h2>".$model->comments;
+            $model->save();
+            //return $this->render('supplier', ['model' => $model]);
             
         } else {
             return $this->render('supplier', ['model' => $model]);
         }
     }
     
-    public function actionAddSupplier()
-    {
-        $model = new Supplier();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            
-            return $this->render('supplier', ['model' => $model]);
-            
-        } else {
-            return $this->render('supplier', ['model' => $model]);
-        }
-    }
-
     /**
      * Displays about page.
      *

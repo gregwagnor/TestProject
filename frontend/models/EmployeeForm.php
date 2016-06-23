@@ -7,7 +7,7 @@ use yii\base\Model;
 /**
  * SupplierForm is the model behind the supplier form.
  */
-class SupplierForm extends Model
+class SupplierForm  extends \yii\db\ActiveRecord//extends Model
 {
     public $supplierID;
     public $vendor;

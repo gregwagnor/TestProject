@@ -18,7 +18,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'comments')->textArea(['rows' => 6]) ?>
 
-                <?= $form->field($model, 'status') ?>
+                //$items = array("active","inactive");
+                //$options = array('0','1');
+                <?= $form->field($model, 'status')->dropDownList(array("active","inactive"),array('0','1')) ?>
 
                 <div class="form-group">
                     <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
