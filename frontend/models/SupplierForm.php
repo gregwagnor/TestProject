@@ -9,7 +9,7 @@ namespace frontend\models;
  */
 class SupplierForm extends \yii\db\ActiveRecord //extends Model
 {
-    public $supplierID;
+    //public $supplierID;
     public $vendor;
     public $comments;
     public $status;
@@ -25,7 +25,7 @@ class SupplierForm extends \yii\db\ActiveRecord //extends Model
     public function rules()
     {
         return [
-            [['vendor', 'status', 'comments'], 'required'],
+            [['vendor', 'comments', 'status'], 'required'],
         ];
     }
 }

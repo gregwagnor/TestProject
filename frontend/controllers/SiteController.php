@@ -158,7 +158,9 @@ class SiteController extends Controller
             
         if ($model->load(Yii::$app->request->post())) {
            
-            echo "<h2>Comments are </h2>".$model->comments;
+            echo "<h2>Vendor is ".$model->vendor."</h2>";
+            echo "<h2>Comments are ".$model->comments."</h2>";
+            echo "<h2>Status is ".$model->status."</h2>";
             $model->save();
             //return $this->render('supplier', ['model' => $model]);
             
