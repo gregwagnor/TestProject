@@ -163,7 +163,7 @@ class SiteController extends Controller
             echo "<h2>Status is ".$model->status."</h2>";
             $model->save();
             //return $this->render('supplier', ['model' => $model]);
-            
+            return $this->render('supplierGrid', ['model' => $model]);
         } else {
             return $this->render('supplier', ['model' => $model]);
         }

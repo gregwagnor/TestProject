@@ -1,7 +1,7 @@
 <?php
 
 namespace frontend\models;
-//use yii\db\ActiveRecord;
+use yii\db\ActiveRecord;
 //use yii\base\Model;
 
 /**
@@ -10,9 +10,9 @@ namespace frontend\models;
 class SupplierForm extends \yii\db\ActiveRecord //extends Model
 {
     //public $supplierID;
-    public $vendor;
-    public $comments;
-    public $status;
+    //public $vendor;
+    //public $comments;
+    //public $status;
     
     public static function tableName()
     {
