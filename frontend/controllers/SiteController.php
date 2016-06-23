@@ -12,7 +12,8 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-
+use frontend\models\EmployeeForm;
+use frontend\models\SupplierForm;
 /**
  * Site controller
  */
@@ -128,6 +129,52 @@ class SiteController extends Controller
             return $this->render('contact', [
                 'model' => $model,
             ]);
+        }
+    }
+    
+        /**
+     * Displays contact page.
+     *
+     * @return mixed
+     */
+    public function actionEmployee()
+    {
+        $model = new EmployeeForm();
+        if ($model->load(Yii::$app->request->post() && $model->validate())) {
+            
+           return $this->render('employee-confirm', ['model' => $model,]);
+        }
+        else 
+        {
+            return $this->render('employee', ['model' => $model,]);
+        }
+    }
+    
+    public function actionSupplier()
+    {
+        $model = new Supplier();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            
+            
+            
+            return $this->render('supplier', ['model' => $model]);
+            
+        } else {
+            return $this->render('supplier', ['model' => $model]);
+        }
+    }
+    
+    public function actionAddSupplier()
+    {
+        $model = new Supplier();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            
+            return $this->render('supplier', ['model' => $model]);
+            
+        } else {
+            return $this->render('supplier', ['model' => $model]);
         }
     }
 

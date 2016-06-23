@@ -40,6 +40,7 @@ AppAsset::register($this);
 		['label' => 'Project - Project Controller - CRUD', 'url' => ['/project/index']],
                 ['label' => 'Project - Site Controller - Project Page', 'url' => ['/site/project']],
 		['label' => 'Employee', 'url' => ['/employee/index']],
+                ['label' => 'Supplier Form', 'url' => ['/site/supplier']],
 		['label' => 'Task', 'url' => ['/task/index']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
     ];
